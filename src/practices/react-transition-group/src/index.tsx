@@ -1,10 +1,16 @@
-import { CompTransitionDemo } from './CompTransition'
-import { CompCSSTransitionDemo } from './CompCSSTransition'
+import { CompTransitionDemo } from "./CompTransition";
+import { CompCSSTransitionDemo } from "./CompCSSTransition";
+import { CompSwitchTransitionDemo } from "./CompSwitchTransition";
 export const ReactTransitionGroupDemo = () => {
   return (
     <>
-      <CompTransitionDemo />
-      <CompCSSTransitionDemo />
+      {false && (
+        <>
+          <CompTransitionDemo />
+          <CompCSSTransitionDemo />
+        </>
+      )}
+      <CompSwitchTransitionDemo />
     </>
-  )
-}
+  );
+};
