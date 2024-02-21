@@ -1,0 +1,39 @@
+.enter-done{
+  opacity: 1;
+}
+
+.exit-done{
+  opacity: 0;
+}
+
+.exit{
+  opacity: 1;
+}
+
+.exit-active{
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+
+.enter{
+  opacity: 0;
+}
+
+.enter-active{
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.appear{
+  opacity: 0;
+}
+
+.appear-active{
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.appear-done{
+  opacity: 1;
+}
