@@ -16,7 +16,7 @@ type List = Item[];
  * @param {number} right 区间右侧的值
  */
 // * @param {boolean | undefined} isRightClosedInterval 是否是右闭区间，即生成的随机数是否包含right。默认是true，也就是包含
-const getRandomIntegerBetweenLeftAndRight = (
+export const getRandomIntegerBetweenLeftAndRight = (
   left: number,
   right: number
   // isRightClosedInterval?: boolean //是否包含right
