@@ -4,20 +4,46 @@ import './CompCSSTransition.css'
 const transitionDuration = 1000
 
 export const CompCSSTransitionDemo = () => {
-  const nodeRef = useRef<HTMLHeadingElement>(null)
+  const helloRef = useRef<HTMLHeadingElement>(null),
+    hiRef = useRef<HTMLHeadingElement>(null)
+
   const [visible, setVisible] = useState(true)
 
   return (
-    <>
-      <CSSTransition
+    <div className='outer'>
+      
+      {/* <CSSTransition
         appear
-        nodeRef={nodeRef}
+        nodeRef={helloRef}
         in={visible}
         timeout={transitionDuration}
       >
-        <h1 ref={nodeRef}>HELLO WORLD </h1>
+        <h1 ref={helloRef}>HELLO! </h1>
+      </CSSTransition> */}
+      <CSSTransition
+        appear
+        nodeRef={helloRef}
+        in={visible}
+        timeout={transitionDuration}
+        classNames='slide'
+      >
+        <h1 className='inner' ref={helloRef}>
+          HELLO!
+        </h1>
+      </CSSTransition>
+      <CSSTransition
+        mountOnEnter
+        // appear
+        nodeRef={hiRef}
+        in={!visible}
+        timeout={transitionDuration}
+        classNames='slide'
+      >
+        <h1 className='inner' ref={hiRef}>
+          Hi!
+        </h1>
       </CSSTransition>
       <button onClick={() => setVisible(!visible)}>切换显示状态</button>
-    </>
+    </div>
   )
 }
