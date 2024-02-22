@@ -47,10 +47,6 @@
   transform: translateX(30px);
 }
 
-.list-exit-active .list-item-inner{
-  position: absolute;
-}
-
 
 .list-enter-active,
 .list-exit-active{
