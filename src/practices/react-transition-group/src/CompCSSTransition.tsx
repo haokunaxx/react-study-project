@@ -22,6 +22,8 @@ export const CompCSSTransitionDemo = () => {
       </CSSTransition> */}
       <CSSTransition
         appear
+        mountOnEnter
+        // unmountOnExit
         nodeRef={helloRef}
         in={visible}
         timeout={transitionDuration}
@@ -32,8 +34,9 @@ export const CompCSSTransitionDemo = () => {
         </h1>
       </CSSTransition>
       <CSSTransition
+        appear
         mountOnEnter
-        // appear
+        // unmountOnExit
         nodeRef={hiRef}
         in={!visible}
         timeout={transitionDuration}

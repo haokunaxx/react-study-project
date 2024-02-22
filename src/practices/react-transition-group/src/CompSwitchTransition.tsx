@@ -12,6 +12,7 @@ export const CompSwitchTransitionDemo = () => {
     <div className='comp-switch-transition-demo-box'>
       <SwitchTransition mode='out-in'>
         <CSSTransition
+          appear
           nodeRef={flag ? trueRef : falseRef}
           in={flag}
           timeout={500}

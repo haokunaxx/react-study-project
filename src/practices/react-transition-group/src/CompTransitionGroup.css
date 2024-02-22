@@ -1,0 +1,58 @@
+.list-item{
+  position: relative;
+  height: 30px;
+  transition: all 1000ms ease;
+}
+
+/* 
+--------------------这样不生效 start 
+.list-enter,
+.list-exit-active{
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.list-exit,
+.list-enter-active{
+  opacity: 1;
+  transform: translateX(0);
+} 
+--------------------这样不生效 end 
+*/
+
+/* 不能够同时指定，需要先制定enter或者exit出发reflow */
+.list-enter{
+  height: 0;
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.list-exit{
+  height: 30px;
+  opacity: 1;
+  transform: translateX(0);
+} 
+
+
+.list-enter-active{
+  height: 30px;
+  opacity: 1;
+  transform: translateX(0);
+} 
+
+.list-exit-active{
+  height: 0;
+  opacity: 0;
+  /* overflow: hidden; */
+  transform: translateX(30px);
+}
+
+.list-exit-active .list-item-inner{
+  position: absolute;
+}
+
+
+.list-enter-active,
+.list-exit-active{
+  transition: all 1000ms ease;
+}
