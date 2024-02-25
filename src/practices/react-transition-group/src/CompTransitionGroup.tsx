@@ -28,7 +28,6 @@ export const getRandomIntegerBetweenLeftAndRight = (
 };
 
 export const CompTransitionGroupDemo = () => {
-  let i = 0;
   const [list, setList] = useState<List>(
     (() =>
       [...Array(10)].map((_, index) => ({

@@ -3,3 +3,16 @@
     padding: 10px;
     /* padding-top: 100px; */
 }
+
+
+.list-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-box .list-item{
+    width: 100px;
+    height: 100px;
+    background-color: #2c82fd;
+    margin:4px;
+}
