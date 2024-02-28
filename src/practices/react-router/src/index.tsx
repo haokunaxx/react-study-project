@@ -1,9 +1,10 @@
 import { NestRouterDemo } from './NestRouter'
-
+import { VueRouterDemo } from './VueRouterDemo'
 export const ReactRouterDemo = () => {
   return (
     <>
-      <NestRouterDemo />
+      { false && <NestRouterDemo />}
+      <VueRouterDemo />
     </>
   )
 }

@@ -6,6 +6,7 @@ import {
   Redirect,
   type LinkProps
 } from 'react-router-dom'
+
 /*
   路由结构
     - login 
@@ -37,10 +38,6 @@ const Link = (props: LinkProps) => {
       <OriginalLink {...props}></OriginalLink>
     </div>
   )
-}
-
-const UserRedirect = () => {
-  return <Redirect to='/user/list' />
 }
 
 const User = () => {
