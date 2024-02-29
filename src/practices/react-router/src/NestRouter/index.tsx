@@ -2,11 +2,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link as OriginalLink,
-  Redirect,
-  type LinkProps
+  Redirect
 } from 'react-router-dom'
-
+import { Link }  from '../Common/LinkWithStyle'
 /*
   路由结构
     - login 
@@ -25,19 +23,6 @@ const UserList = () => {
 
 const UserDetail = () => {
   return <h1>UserDetail Page</h1>
-}
-
-const Link = (props: LinkProps) => {
-  return (
-    <div
-      style={{
-        display: 'inline-block',
-        margin: '12px'
-      }}
-    >
-      <OriginalLink {...props}></OriginalLink>
-    </div>
-  )
 }
 
 const User = () => {
